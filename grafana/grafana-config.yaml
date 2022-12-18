@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-config
+  namespace: dem
+  labels:
+    app: grafana
+data:
+  grafana-datasources: |
+    apiVersion: 1
+    datasources:
+    - name: prometheus-targets
+      type: prometheus
+      orgId: 1
+      url: http://prometheus-service.dem.svc:9091
+      version: 1
+
+
+
