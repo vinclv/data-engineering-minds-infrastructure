@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: prometheus-deployment
-  namespace: vinod
+  namespace: dem
   labels:
     app: prometheus
 spec:
@@ -25,7 +25,6 @@ spec:
             - name: prometheus-config-volume
               mountPath: /opt/bitnami/prometheus/conf/
 
-
       volumes:
         - name: prometheus-config-volume
           configMap:
@@ -34,3 +33,5 @@ spec:
             items:
               - key: prometheus.properties
                 path: prometheus.yml
+
+      serviceAccountName: prometheus-serviceaccount
