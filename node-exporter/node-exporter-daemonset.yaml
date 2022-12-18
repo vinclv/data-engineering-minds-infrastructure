@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: ne-daemonset
+  name: node-exporter-daemonset
   namespace: dem
   labels:
     app: node-exporter

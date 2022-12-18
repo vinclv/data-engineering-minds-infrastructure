@@ -21,7 +21,7 @@ data:
               - dem
         relabel_configs:
         - source_labels: [__meta_kubernetes_service_name]
-          regex: 'ne-service'
+          regex: 'node-exporter-service'
           action: keep
 
 

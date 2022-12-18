@@ -25,6 +25,7 @@ spec:
             - name: prometheus-config-volume
               mountPath: /opt/bitnami/prometheus/conf/
 
+      serviceAccountName: prometheus-serviceaccount
       volumes:
         - name: prometheus-config-volume
           configMap:
@@ -33,5 +34,3 @@ spec:
             items:
               - key: prometheus.properties
                 path: prometheus.yml
-
-      serviceAccountName: prometheus-serviceaccount
