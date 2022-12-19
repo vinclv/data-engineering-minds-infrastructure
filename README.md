@@ -30,10 +30,10 @@ kubectl config set-cluster minikube
 `
 
 4. Create the namespace - *dem*<br/> 
-`kubectl create namespace`
+`kubectl create namespace dem`
 
 5. Set *dem* as the default namespace<br/>
-`kubectl config set-context --current --namespace=vinod`
+`kubectl config set-context --current --namespace=dem`
 
 ### Node Exporter
 1. Create the daemonset for node exporter<br/>
