@@ -27,4 +27,24 @@ kubectl config use-context minikube
 kubectl config set-cluster minikube
 `
 
+### Deploy Node Exporter
+1. Create the node exporter daemonset<br/>
+`
+kubectl apply -f node-exporter/node-exporter-daemonset.yaml
+`
+
+2. Create the ClusterIP service for the node exporter application
+`
+kubectl apply -f node-exporter/node-exporter-service.yaml
+`
+
+3. Check whether the application is running fine or not via port-forwarding
+`
+kubectl port-forward svc/node-exporter-service 9250:9250 -n dem
+`
+
+4. Go to the web browser and check the address - *http://localhost:9250/metrics
+
+
+
 
