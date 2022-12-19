@@ -30,6 +30,8 @@ kubectl config set-cluster minikube
 4. Create the namespace *dem* and set it to default namespace<br/> 
 `
 kubectl create namespace
+`
+`
 kubectl config set-context --current --namespace=vinod
 `
 
