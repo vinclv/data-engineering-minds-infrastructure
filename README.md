@@ -27,30 +27,56 @@ kubectl config use-context minikube
 kubectl config set-cluster minikube
 `
 
-4. Create the namespace *dem*<br/> 
+4. Create the namespace - *dem*<br/> 
 `kubectl create namespace`
 
 5. Set *dem* as the default namespace<br/>
 `kubectl config set-context --current --namespace=vinod`
 
-### Deploy Node Exporter
-1. Create the node exporter daemonset<br/>
+### Node Exporter
+1. Create the daemonset for the node exporter<br/>
 `
 kubectl apply -f node-exporter/node-exporter-daemonset.yaml
 `
 
-2. Create the ClusterIP service for the node exporter application
+2. Create the ClusterIP service for the node exporter application<br/>
 `
 kubectl apply -f node-exporter/node-exporter-service.yaml
 `
 
-3. Check whether the application is running fine or not via port-forwarding
+3. Check whether the node exporter application is running fine or not via port-forwarding<br/>
 `
 kubectl port-forward svc/node-exporter-service 9250:9250 -n dem
 `
 
 4. Go to the web browser and check the address - *http&#58;//localhost:9250/metrics*
 
+### Prometheus
 
+1. Create cluster role, service account for prometheus, and bind the cluster role to the service account<br/>
+`
+kubectl apply -f prometheus/prometheus-rbac.yaml
+`
 
+2. Create the config map for prometheus<br/>
+`
+kubectl apply -f prometheus/prometheus-config.yaml
+`
+
+3. Create the deployment for prometheus<br/>
+`
+kubectl apply -f prometheus/prometheus-deployment.yaml
+`
+
+4. Before creating the load balancer for prometheus, create a routable network between the host system and the minikube cluster. Type the below command in a sparate terminal window:<br/>
+`
+minikube tunnel
+`
+
+5. Create the load balancer service for the prometheus application<br/>
+`
+kubectl apply -f prometheus/prometheus-service.yaml
+`
+
+6. Go to the web browser and check the address - *http&#58;//localhost:9091* to confirm that prometheus is running fine.
 
