@@ -41,7 +41,7 @@ kubectl config set-cluster minikube
 kubectl apply -f node-exporter/node-exporter-daemonset.yaml
 `
 
-2. Create the ClusterIP service for node exporter application<br/>
+2. Create the ClusterIP service for the node exporter application<br/>
 `
 kubectl apply -f node-exporter/node-exporter-service.yaml
 `
