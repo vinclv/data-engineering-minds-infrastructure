@@ -11,7 +11,7 @@ This repository contains the Kubernetes configuration files that I use for my [Y
 2. Apache Flink
 
 ## Steps to deploy the applications inside Kubernetes
-### 1. Prepare the setup
+### Prepare the setup
 1. Install minikube (this also includes _kubectl_ installation)<br/>
 `
 brew install minikube
