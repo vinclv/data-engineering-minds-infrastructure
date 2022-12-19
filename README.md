@@ -4,6 +4,7 @@ This repository contains the Kubernetes configuration files that I use for my [Y
 2. [Prometheus](https://github.com/vinclv/data-engineering-minds-kubernetes/tree/master/prometheus)
 3. [Grafana](https://github.com/vinclv/data-engineering-minds-kubernetes/tree/master/grafana)
 
+
 **Note:**
 1. The configuration files are tested with minikube.
 2. Please check my YouTube video for a detailed explanation.
