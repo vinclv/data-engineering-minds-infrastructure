@@ -16,10 +16,12 @@ This repository contains the Kubernetes configuration files that I use for my [Y
 `
 brew install minikube
 `
+
 2. Set the default context to minikube<br/>
 `
 kubectl config use-context minikube
 `
+
 3. Set the cluster to minikube<br/>
 `
 kubectl config set-cluster minikube
