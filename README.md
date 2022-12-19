@@ -1,5 +1,5 @@
 # data-engineering-minds-kubernetes
-This repository contains the Kubernetes configuration files that I use for my [Youtube](https://www.youtube.com/channel/UCya8wCkH9PSQQgT-50ohYvQ) videos for deploying the below applications:
+This repository contains the Kubernetes configuration files that I use for my [YouTube](https://www.youtube.com/channel/UCya8wCkH9PSQQgT-50ohYvQ) videos for deploying the below applications:
 1. [Node Exporter](https://github.com/vinclv/data-engineering-minds-kubernetes/tree/master/node-exporter)
 2. [Prometheus](https://github.com/vinclv/data-engineering-minds-kubernetes/tree/master/prometheus)
 3. [Grafana](https://github.com/vinclv/data-engineering-minds-kubernetes/tree/master/grafana)
