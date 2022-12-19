@@ -107,14 +107,14 @@ kubectl apply -f grafana/grafana-service.yaml
 6. To create Grafana dashboards for the node exporter, please check my YouTube video.
 
 ## Useful links
-*1.* [minikube - Qucik Start](https://minikube.sigs.k8s.io/docs/start/)<br/>
-*2.* [Kubernetes Crash Course](https://www.youtube.com/watch?v=s_o8dwzRlu4)<br/>
-*3.* [Lens UI for Kubernetes](https://k8slens.dev/)<br/>
-*4.* [kubectl cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)<br/>
-*5.* [Docker image for Prometheus](https://hub.docker.com/r/bitnami/prometheus)<br/>
-*6.* [Docker image for Grafana](https://hub.docker.com/r/grafana/grafana)<br/>
-*7.* [Docker image for Node Exporter](https://hub.docker.com/r/prom/node-exporter)<br/>
-*8.* [List of Prometheus configurations](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)<br/>
-*9.* [Example data source config file for Grafana](https://grafana.com/docs/grafana/latest/administration/provisioning/#example-data-source-config-file)<br/>
-*10.* [Prometheus relabels](https://grafana.com/blog/2022/03/21/how-relabeling-in-prometheus-works/)<br/>
+**1.** [minikube - Qucik Start](https://minikube.sigs.k8s.io/docs/start/)<br/>
+**2.** [Kubernetes Crash Course](https://www.youtube.com/watch?v=s_o8dwzRlu4)<br/>
+**3.** [Lens UI for Kubernetes](https://k8slens.dev/)<br/>
+**4.** [kubectl cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)<br/>
+**5.** [Docker image for Prometheus](https://hub.docker.com/r/bitnami/prometheus)<br/>
+**6.** [Docker image for Grafana](https://hub.docker.com/r/grafana/grafana)<br/>
+**7.** [Docker image for Node Exporter](https://hub.docker.com/r/prom/node-exporter)<br/>
+**8.** [List of Prometheus configurations](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)<br/>
+**9.** [Example data source config file for Grafana](https://grafana.com/docs/grafana/latest/administration/provisioning/#example-data-source-config-file)<br/>
+**10.** [Prometheus relabels](https://grafana.com/blog/2022/03/21/how-relabeling-in-prometheus-works/)<br/>
 
