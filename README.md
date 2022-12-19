@@ -106,7 +106,7 @@ kubectl apply -f grafana/grafana-service.yaml
 
 6. To create Grafana dashboards for the node exporter, please check my YouTube video.
 
-##Useful links
+## Useful links
 1. [minikube - Qucik Start](https://minikube.sigs.k8s.io/docs/start/)
 2. [Kubernetes Crash Course](https://www.youtube.com/watch?v=s_o8dwzRlu4)
 3. [Lens UI for Kubernetes](https://k8slens.dev/)
