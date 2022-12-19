@@ -107,14 +107,14 @@ kubectl apply -f grafana/grafana-service.yaml
 6. To create Grafana dashboards for the node exporter, please check my YouTube video.
 
 ## Useful links
-1. [minikube - Qucik Start](https://minikube.sigs.k8s.io/docs/start/)
-2. [Kubernetes Crash Course](https://www.youtube.com/watch?v=s_o8dwzRlu4)
-3. [Lens UI for Kubernetes](https://k8slens.dev/)
-4. [kubectl cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-5. [Docker image for Prometheus](https://hub.docker.com/r/bitnami/prometheus)
-6. [Docker image for Grafana](https://hub.docker.com/r/grafana/grafana)
-7. [Docker image for Node Exporter](https://hub.docker.com/r/prom/node-exporter)
-8. [List of Prometheus configurations](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
-9. [Example data source config file for Grafana](https://grafana.com/docs/grafana/latest/administration/provisioning/#example-data-source-config-file)
-10. [Prometheus relabels](https://grafana.com/blog/2022/03/21/how-relabeling-in-prometheus-works/)
+* [minikube - Qucik Start](https://minikube.sigs.k8s.io/docs/start/)
+* [Kubernetes Crash Course](https://www.youtube.com/watch?v=s_o8dwzRlu4)
+* [Lens UI for Kubernetes](https://k8slens.dev/)
+* [kubectl cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+* [Docker image for Prometheus](https://hub.docker.com/r/bitnami/prometheus)
+* [Docker image for Grafana](https://hub.docker.com/r/grafana/grafana)
+* [Docker image for Node Exporter](https://hub.docker.com/r/prom/node-exporter)
+* [List of Prometheus configurations](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
+* [Example data source config file for Grafana](https://grafana.com/docs/grafana/latest/administration/provisioning/#example-data-source-config-file)
+* [Prometheus relabels](https://grafana.com/blog/2022/03/21/how-relabeling-in-prometheus-works/)
 
