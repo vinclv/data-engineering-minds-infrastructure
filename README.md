@@ -9,7 +9,7 @@ This repository contains the Kubernetes configuration files that I use for my [Y
 2. Please check my YouTube video for a detailed explanation.
 
 ## Applications to be included in the future
-1. Kafka ecosystem - Apache Kafka, Kafka Connect, Schema registry, KSQL, and REST Proxy
+1. Kafka ecosystem - Apache Kafka, Kafka Connect, Schema Registry, KSQL, and REST Proxy
 2. Apache Flink
 
 ## Steps to deploy the applications inside Kubernetes
