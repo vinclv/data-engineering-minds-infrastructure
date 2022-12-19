@@ -34,12 +34,12 @@ kubectl config set-cluster minikube
 `kubectl config set-context --current --namespace=vinod`
 
 ### Node Exporter
-1. Create the daemonset for the node exporter<br/>
+1. Create the daemonset for node exporter<br/>
 `
 kubectl apply -f node-exporter/node-exporter-daemonset.yaml
 `
 
-2. Create the ClusterIP service for the node exporter application<br/>
+2. Create the ClusterIP service for node exporter application<br/>
 `
 kubectl apply -f node-exporter/node-exporter-service.yaml
 `
@@ -52,7 +52,6 @@ kubectl port-forward svc/node-exporter-service 9250:9250 -n dem
 4. Go to the web browser and check the address - *http&#58;//localhost:9250/metrics*
 
 ### Prometheus
-
 1. Create cluster role, service account for prometheus, and bind the cluster role to the service account<br/>
 `
 kubectl apply -f prometheus/prometheus-rbac.yaml
@@ -80,3 +79,25 @@ kubectl apply -f prometheus/prometheus-service.yaml
 
 6. Go to the web browser and check the address - *http&#58;//localhost:9091* to confirm that prometheus is running fine.
 
+### Grafana
+1. Create the config map for grafana<br/>
+`
+kubectl apply -f grafana/grafana-config.yaml
+`
+
+2. Create the deployment for grafana<br/>
+`
+kubectl apply -f grafana/grafana-deployment.yaml
+`
+
+3. Before creating the load balancer for grafana, create a routable network between the host system and the minikube cluster. Type the below command in a sparate terminal window. If there is already a tunnel running, then skip this step.<br/>
+`
+minikube tunnel
+`
+
+4. Create the load balancer service for the grafana application<br/>
+`
+kubectl apply -f grafana/grafana-service.yaml
+`
+
+5. Go to the web browser and check the address - *http&#58;//localhost:3001* to confirm that grafana is running fine.
