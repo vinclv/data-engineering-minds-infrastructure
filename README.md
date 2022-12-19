@@ -10,4 +10,19 @@ This repository contains the Kubernetes configuration files that I use for my [Y
 1. Kafka ecosystem - Apache Kafka, Kafka Connect, Schema registry, KSQL, and REST Proxy
 2. Apache Flink
 
+## Steps to deploy the applications inside Kubernetes
+### Prepare the setup
+1. Install minikube (this also includes _kubectl_ installation)
+`
+brew install minikube
+`
+2. Set the default context to minikube
+`
+kubectl config use-context minikube
+`
+3. Set the cluster to minikube
+`
+kubectl config set-cluster minikube
+`
+
 
