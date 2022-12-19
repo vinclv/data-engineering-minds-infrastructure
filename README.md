@@ -4,7 +4,6 @@ This repository contains the Kubernetes configuration files that I use for my [Y
 2. [Prometheus](https://github.com/vinclv/data-engineering-minds-kubernetes/tree/master/prometheus)
 3. [Grafana](https://github.com/vinclv/data-engineering-minds-kubernetes/tree/master/grafana)
 
-
 **Note:**
 1. The configuration files are tested with minikube.
 2. Please check my YouTube video for a detailed explanation.
@@ -104,3 +103,18 @@ kubectl apply -f grafana/grafana-service.yaml
 `
 
 5. Go to the web browser and check the address - *http&#58;//localhost:3001* to confirm that grafana is running fine.
+
+6. To create Grafana dashboards for the node exporter, please check my YouTube video.
+
+##Useful links
+1. [minikube - Qucik Start](https://minikube.sigs.k8s.io/docs/start/)
+2. [Kubernetes Crash Course](https://www.youtube.com/watch?v=s_o8dwzRlu4)
+3. [Lens UI for Kubernetes](https://k8slens.dev/)
+4. [kubectl cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+5. [Docker image for Prometheus](https://hub.docker.com/r/bitnami/prometheus)
+6. [Docker image for Grafana](https://hub.docker.com/r/grafana/grafana)
+7. [Docker image for Node Exporter](https://hub.docker.com/r/prom/node-exporter)
+8. [List of Prometheus configurations](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
+9. [Example data source config file for Grafana](https://grafana.com/docs/grafana/latest/administration/provisioning/#example-data-source-config-file)
+10. [Prometheus relabels](https://grafana.com/blog/2022/03/21/how-relabeling-in-prometheus-works/)
+
