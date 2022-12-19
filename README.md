@@ -43,7 +43,7 @@ kubectl apply -f node-exporter/node-exporter-service.yaml
 kubectl port-forward svc/node-exporter-service 9250:9250 -n dem
 `
 
-4. Go to the web browser and check the address - *http://localhost:9250/metrics*
+4. Go to the web browser and check the address - *http&#58;//localhost:9250/metrics*
 
 
 
