@@ -1,16 +1,3 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: prometheus-clusterrole
-  namespace: dem
-rules:
-  - apiGroups: [""]
-    resources:
-      - services
-    verbs: ["get", "list", "watch"]
-  - nonResourceURLs: ["/metrics"]
-    verbs: ["get"]
----
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -18,15 +5,24 @@ metadata:
   name: prometheus-serviceaccount
 ---
 apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: prometheus-clusterrole
+rules:
+  - apiGroups: [""]
+    resources:
+      - services
+    verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: prometheus-clusterrolebinding
-  namespace: dem
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: prometheus-clusterrole
 subjects:
   - kind: ServiceAccount
     name: prometheus-serviceaccount
     namespace: dem
+roleRef:
+  kind: ClusterRole
+  name: prometheus-clusterrole
+  apiGroup: rbac.authorization.k8s.io
