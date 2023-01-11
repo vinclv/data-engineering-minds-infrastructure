@@ -112,7 +112,7 @@ kubectl apply -f grafana/grafana-service.yaml
 6. To create Grafana dashboards for the node exporter, please check my [YouTube](https://www.youtube.com/watch?v=c9A2yjnNuHA) video.
 
 ## Useful links
-1. My [YouTube](https://www.youtube.com/watch?v=c9A2yjnNuHA) video tutorial for deploying Prometheus, Grafan, and Node Exporter inside Kubernetes
+1. [My YouTube video tutorial for deploying Prometheus, Grafana, and Node Exporter inside Kubernetes](https://www.youtube.com/watch?v=c9A2yjnNuHA)
 2. [minikube - Qucik Start](https://minikube.sigs.k8s.io/docs/start/)
 3. [Kubernetes Crash Course](https://www.youtube.com/watch?v=s_o8dwzRlu4)
 4. [Lens UI for Kubernetes](https://k8slens.dev/)
