@@ -1,0 +1,59 @@
+version: '3'
+networks:
+  dem:
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: oltp_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - dem
+
+  prometheus-server:
+    image: bitnami/prometheus:latest
+    restart: always
+    ports:
+      - "8090:9090"
+    volumes:
+      - ./prometheus.yml:/opt/bitnami/prometheus/conf/prometheus.yml
+    networks:
+      - dem
+
+  postgres-exporter:
+    image: bitnami/postgres-exporter:latest
+    restart: always
+    command: --web.listen-address=:9187
+    ports:
+      - "9187:9187"
+    environment:
+      #DATA_SOURCE_NAME: postgresql://postgres:postgres1@postgres:5432/oltp_db?sslmode=disable
+      #DATA_SOURCE_URI_FILE: /opt/bitnami/postgres-exporter/conf/uri
+      #DATA_SOURCE_USER_FILE: /opt/bitnami/postgres-exporter/conf/user
+      #DATA_SOURCE_PASS_FILE: /opt/bitnami/postgres-exporter/conf/pass
+      DATA_SOURCE_URI: postgres:5432/oltp_db?sslmode=disable
+      DATA_SOURCE_USER: postgres
+      DATA_SOURCE_PASS: postgres
+    volumes:
+        - ./config/uri:/opt/bitnami/postgres-exporter/conf/uri
+        - ./config/user:/opt/bitnami/postgres-exporter/conf/user
+        - ./config/password:/opt/bitnami/postgres-exporter/conf/pass
+    networks:
+      - dem
+
+  grafana-server:
+    image: grafana/grafana:latest
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana.yml:/etc/grafana/provisioning/datasources/grafana.yml
+    environment:
+      GF_SECURITY_ADMIN_USER: grafana
+      GF_SECURITY_ADMIN_PASSWORD: grafana
+    networks:
+      - dem

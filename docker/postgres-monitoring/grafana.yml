@@ -1,0 +1,6 @@
+datasources:
+  - name: prometheus-targets
+    type: prometheus
+    orgId: 1
+    url: http://prometheus-server:9090
+    version: 1

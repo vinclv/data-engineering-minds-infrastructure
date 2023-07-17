@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: postgres-monitoring
+    scrape_interval : 60s
+    scrape_timeout: 30s
+    honor_timestamps: true
+    static_configs:
+      - targets: ['postgres-exporter:9187']
